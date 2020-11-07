@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import db from "../firebase.js"
 import AddForm from "./AddForm"
 
+const ZoomLinksStyle = {
+    backgroundColor: "#3B6978",
+    border: "4px solid #204051",
+    boxSizing: "border-box",
+    borderRadius: "18px",
+}
+
 function ZoomLinks(props) {
     const firebasevar = props.user+"zoomlinks"
     const [ZoomLinks, setZoomLinks] = useState([]);
@@ -14,7 +21,7 @@ function ZoomLinks(props) {
     }, [firebasevar]);
     console.log(ZoomLinks)
     return (
-        <div>
+        <div style={ZoomLinksStyle}>
            {ZoomLinks.map((zoomlink) => (
                 <p>{zoomlink.event}</p>
             ))} 
