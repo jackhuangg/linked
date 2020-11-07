@@ -31,6 +31,8 @@ jobs:
         shell: bash
         
       - name: NPM Build
+        env:
+          CI: false
         run: npm run build
         shell: bash
       
