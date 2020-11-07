@@ -1,3 +1,31 @@
-body{
-    background-color: #E7DFD5;
+@font-face {
+	font-family: 'Rock Salt', cursive;
+	src: url(Rock_Salt/RockSalt-Regular.ttf);
 }
+body{
+    background-color: #84A9AC;
+}
+
+#title{
+    text-align:center;
+    margin:2%;
+    font: Rock Salt;
+}
+
+.column {
+    float: left;
+    width: 30.33%;
+    margin: 1%;
+    /* padding:1%; */
+    background-color: #3B6978;
+    border-radius: 18px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
