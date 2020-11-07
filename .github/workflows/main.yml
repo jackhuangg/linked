@@ -31,9 +31,9 @@ jobs:
         shell: bash
         
       - name: NPM Build
-        run: |
-          $CI = false
-          npm run build
+        env:
+          CI: false
+        run: npm run build
         shell: bash
       
       - name: Set Github Config
