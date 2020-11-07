@@ -5,7 +5,7 @@ import ZoomLinks from "./ZoomLinks"
 require('typeface-rock-salt') 
 
 function Homepage() {
-    var user = firebase.auth().currentUser.displayName;
+    var user = firebase.auth().currentUser;
     const mystyle = {
         color: "#204051",
         backgroundColor: "#E7DFD5",
