@@ -6,10 +6,8 @@ function AddForm(props) {
     const [forminput, setform] = useState("");
     const sendevent = (e) => {
         e.preventDefault();
-        db.collection(props.collection).add({
-          event: forminput,
-          createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-        });
+        props.user.zoomlinks.push(forminput);
+        props.updateUser(props.user);
         setform("");
       };
     return (

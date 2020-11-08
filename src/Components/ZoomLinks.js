@@ -10,22 +10,12 @@ const ZoomLinksStyle = {
 }
 
 function ZoomLinks(props) {
-    const firebasevar = props.user+"zoomlinks"
-    const [ZoomLinks, setZoomLinks] = useState([]);
-    useEffect(() => {
-    db.collection(firebasevar)
-        .orderBy("createdAt")
-        .onSnapshot((snapshot) =>
-        setZoomLinks(snapshot.docs.map((doc) => doc.data()))
-      );
-    }, [firebasevar]);
-    console.log(ZoomLinks)
     return (
         <div style={ZoomLinksStyle}>
-           {ZoomLinks.map((zoomlink) => (
-                <p>{zoomlink.event}</p>
+           {props.user.zoomlinks.map((zoomlink) => (
+                <p>{zoomlink}</p>
             ))} 
-            <AddForm collection={firebasevar}/>
+            <AddForm updateUser={props.updateUser} user={props.user}/>
         </div>
     )
 }
