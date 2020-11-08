@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import firebase from "firebase"
 import "../firebase.js"
+import db from "../firebase.js"
 import ZoomLinks from "./ZoomLinks"
 import Links from "./Links";
 import TodoList from "./TodoList";
@@ -25,6 +26,37 @@ function Title() {
 
 function Homepage() {
     const user = firebase.auth().currentUser;
+
+    // Firebase User to pass down to the props
+    const [firebaseUser, setFireBaseUser] = useState({
+        goals: [],
+        zoomlinks: [],
+        links: []
+    });
+
+    // Load the firebase user from firestore
+    useEffect(() => {
+        const userRef = db.collection("users").doc(user.uid);
+
+        userRef.get()
+        .then((snapshot) => {
+            if(snapshot.exists) {
+                setFireBaseUser(snapshot.data());
+            }
+            else {
+                updateUser(firebaseUser);
+            }
+        });
+    }, []);
+
+    // Update user to update the user on firestore
+    const updateUser = (object) => {
+        const userRef = db.collection("users").doc(user.uid);
+        userRef.set(object).then();
+        const userClone = {...object};
+        setFireBaseUser(userClone);
+    };
+
     return (
         <>
             <Title />
@@ -32,7 +64,7 @@ function Homepage() {
                 <Row>
                     <Col>
                         <Row>
-                            <ZoomLinks />
+                            <ZoomLinks user={firebaseUser} updateUser={updateUser}/>
                         </Row>
                         <Row>
                             <Goals />
