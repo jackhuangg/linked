@@ -25,12 +25,11 @@ const HeadingStyle = {
 function ZoomLinks(props) {
     return (
         <div>
-            <div style={ZoomLinksStyle}>
-                <h1 style={HeadingStyle}>Zoom Links</h1>
-                {ZoomLinks.map((zoomlink) => (
-                    <p>{zoomlink.event}</p>
-                ))} 
-                <AddForm collection={firebasevar}/>
+             <div style={ZoomLinksStyle}>
+            {props.user.zoomlinks.map((zoomlink) => (
+                 <p>{zoomlink}</p>
+             ))} 
+             <AddForm updateUser={props.updateUser} user={props.user}/>
             </div>
         </div>
     )
