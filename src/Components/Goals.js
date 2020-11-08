@@ -27,14 +27,13 @@ const HeadingStyle = {
 
 function Goals() {
     return (
-            <div>
-            
-            <h1 style={HeadingStyle}>Goals</h1>
+        <div>
             <div style={LinksStyle}>
-                {Goals.map((goal) => (
-                    <p>{goal.event}</p>
+                <h1 style={HeadingStyle}>Goals</h1>
+                {user.goals.map((Goals) => (
+                    <p>{goal}</p>
                 ))} 
-                <AddForm collection={firebasevar}/>
+                <AddForm user={user} updateUser={updateUser} updateType={"goal"} />
             </div>
         </div>
     )
