@@ -6,7 +6,45 @@ import Homepage from "./Homepage"
 
 const CREDENTIAL_KEY = "userCredential";
 
+const HeadingStyle = {
+  fontStyle: "bold",
+  fontWeight: "normal",
+  fontSize: "50px",
+  lineHeight: "57px",
+  marginTop: "10px",
+  marginLeft: "10px",
+  color: "#204051",
+  textAlign: "center"
+}
+
+const TitleStyle = {
+  fontFamily: "Rock Salt",
+  fontStyle: "normal",
+  fontWeight: "normal",
+  fontSize: "100px",
+  lineHeight: "60px",
+  marginTop: "10px",
+  marginLeft: "10px",
+  color: "#84A9AC",
+  textAlign: "center"
+}
+
+const QuoteStyle = {
+  fontWeight: "normal",
+  fontSize: "20px",
+  lineHeight: "40px",
+  marginTop: "30px",
+  marginBottom: "30px",
+  color: "#204051",
+  textAlign: "center"
+}
+
 function App() {
+  const titleStyle = {
+    color: "#204051",
+    backgroundColor: "#E7DFD5",
+    textAlign: "center"
+};
   // Logic state that indicates whether
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [waitingForAuth, setWaitingForAuth] = useState(false);
@@ -43,15 +81,25 @@ function App() {
   }
 
   if(waitingForAuth) {
-    return <h3>Waiting for auth...</h3>
+    return <h1 style={titleStyle} >
+              Waiting for Authentication...
+          </h1>
   }
   else if (isLoggedIn) {
     return <Homepage />
   }
   else {
     return <div className="App">
-      <h1>Welcome To Our App</h1>
+      <h1 style= {HeadingStyle}>WELCOME TO</h1>
+      <h1 style= {TitleStyle}>Linked</h1>
       <button onClick={onSubmit}>Login with Google</button>
+      <h1 style= {QuoteStyle}>“The Best Way To Get Started Is To Quit Talking And Begin Doing.” – Walt Disney</h1>
+      <h1 style= {QuoteStyle}>“Don’t Let Yesterday Take Up Too Much Of Today.” – Will Rogers</h1>
+      <h1 style= {QuoteStyle}>“The Only Limit To Our Realization Of Tomorrow Will Be Our Doubts Of Today.” – Franklin D. Roosevelt</h1>
+      <h1 style= {QuoteStyle}>“Creativity Is Intelligence Having Fun.” – Albert Einstein</h1>
+      <h1 style= {QuoteStyle}>“You Are Never Too Old To Set Another Goal Or To Dream A New Dream.” – C.S. Lewis</h1>
+      <h1 style= {QuoteStyle}>“Today’s Accomplishments Were Yesterday’s Impossibilities.” – Robert H. Schuller</h1>
+      
     </div>
   }
 }
