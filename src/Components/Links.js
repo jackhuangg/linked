@@ -22,7 +22,7 @@ const HeadingStyle = {
     color: "#E7DFD5"
 }
 
-function Links(props) {
+function Links() {
     return (
         <div>
             <div style={LinksStyle}>
