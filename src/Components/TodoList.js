@@ -3,7 +3,7 @@ import AddForm from "./AddForm"
 
 const ListStyle = {
     position: "relative",
-    height: "500px",
+    height: "665px",
     width: "300px",
     backgroundColor: "#84A9AC",
     border: "4px solid #84A9AC",

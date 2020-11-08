@@ -4,7 +4,7 @@ import AddForm from "./AddForm"
 
 const LinksStyle = {
     position: "relative",
-    height: "500px",
+    height: "94%",
     width: "300px",
     backgroundColor: "#84A9AC",
     border: "4px solid #84A9AC",
