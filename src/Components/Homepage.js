@@ -52,7 +52,7 @@ function Homepage() {
                     updateUser(firebaseUser);
                 }
             });
-    }, []);
+    },);
 
     // Update user to update the user on firestore
     const updateUser = (object) => {
