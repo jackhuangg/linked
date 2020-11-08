@@ -8,8 +8,8 @@ const LinksStyle = {
     backgroundColor: "#84A9AC",
     border: "4px solid #204051",
     boxSizing: "border-box",
-    borderRadius: "14px",
-    marginTop:"77%",
+    
+    marginTop:"37%",
     marginBottom: "14%",
 
 }
@@ -30,10 +30,10 @@ function Goals() {
         <div>
             <div style={LinksStyle}>
                 <h1 style={HeadingStyle}>Goals</h1>
-                {user.goals.map((Goals) => (
+                {user.goals.map((goal) => (
                     <p>{goal}</p>
                 ))} 
-                <AddForm user={user} updateUser={updateUser} updateType={"goal"} />
+                <AddForm user={user} updateUser={goal} updateType={"goal"} />
             </div>
         </div>
     )
