@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import AddForm from "./AddForm"
 
 const LinksStyle = {
-    height: "103%",
-    width: "450px",
+    position: "relative",
+    height: "230px",
+    width: "383px",
     backgroundColor: "#84A9AC",
     border: "4px solid #84A9AC",
     boxSizing: "border-box",

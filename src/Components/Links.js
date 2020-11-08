@@ -3,7 +3,8 @@ import db from "../firebase.js"
 import AddForm from "./AddForm"
 
 const LinksStyle = {
-    height: "100%",
+    position: "relative",
+    height: "500px",
     width: "300px",
     backgroundColor: "#84A9AC",
     border: "4px solid #84A9AC",
