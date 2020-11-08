@@ -22,17 +22,7 @@ const HeadingStyle = {
     color: "#E7DFD5"
 }
 
-function TodoList(props) {
-    const firebasevar = props.user+"todolist"
-    const [TodoList, SetTodoList] = useState([]);
-    useEffect(() => {
-    db.collection(firebasevar)
-        .orderBy("createdAt")
-        .onSnapshot((snapshot) =>
-        SetTodoList(snapshot.docs.map((doc) => doc.data()))
-      );
-    }, [firebasevar]);
-    console.log(TodoList)
+function TodoList() {
     return (
         <div>
             <div style={ListStyle}>
