@@ -1,6 +1,5 @@
 import React from 'react'
 import AddForm from "./AddForm"
-import db from "../firebase.js"
 
 const LinksStyle = {
     height: "230px",
@@ -25,15 +24,15 @@ const HeadingStyle = {
     color: "#E7DFD5"
 }
 
-function Goals() {
+function Goals({user, updateUser}) {
     return (
         <div>
             <div style={LinksStyle}>
                 <h1 style={HeadingStyle}>Goals</h1>
-                {user.goals.map((Goals) => (
+                {user.goals.map((goal) => (
                     <p>{goal}</p>
                 ))} 
-                <AddForm user={user} updateUser={updateUser} updateType={"goal"} />
+                <AddForm user={user} updateUser={updateUser} updateType={"goals"} />
             </div>
         </div>
     )

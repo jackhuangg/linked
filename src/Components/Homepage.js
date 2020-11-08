@@ -40,25 +40,25 @@ function Homepage() {
         const userRef = db.collection("users").doc(user.uid);
 
         userRef.get()
-        .then((snapshot) => {
-            if(snapshot.exists) {
-                const userData = snapshot.data();
-                // Check if user data exists
-                if(!userData["todolist"])
-                    userData["todolist"] = [];
-                setFireBaseUser(userData);
-            }
-            else {
-                updateUser(firebaseUser);
-            }
-        });
+            .then((snapshot) => {
+                if (snapshot.exists) {
+                    const userData = snapshot.data();
+                    // Check if user data exists
+                    if (!userData["todolist"])
+                        userData["todolist"] = [];
+                    setFireBaseUser(userData);
+                }
+                else {
+                    updateUser(firebaseUser);
+                }
+            });
     }, []);
 
     // Update user to update the user on firestore
     const updateUser = (object) => {
         const userRef = db.collection("users").doc(user.uid);
         userRef.set(object).then();
-        const userClone = {...object};
+        const userClone = { ...object };
         setFireBaseUser(userClone);
     };
 
@@ -69,7 +69,7 @@ function Homepage() {
                 <Row>
                     <Col>
                         <Row>
-                            <ZoomLinks user={firebaseUser} updateUser={updateUser}/>
+                            <ZoomLinks user={firebaseUser} updateUser={updateUser} />
                         </Row>
                         <Row>
                             <Goals user={firebaseUser} updateUser={updateUser} />
