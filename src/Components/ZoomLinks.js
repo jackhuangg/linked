@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import db from "../firebase.js"
 import AddForm from "./AddForm"
+import { Container } from "react-grid-system";
+import LinkDisplay from "./LinkDisplay";
 
 const ZoomLinksStyle = {
     position: "relative",
@@ -26,14 +27,20 @@ const HeadingStyle = {
 }
 
 function ZoomLinks(props) {
+    const onDelete = (index) => () => {
+        props.user.zoomlinks.splice(index, 1);
+        props.updateUser(props.user);
+    };
+
     return (
         <div style={ZoomLinksStyle}>
         <h1 style={HeadingStyle}>Zoom Links</h1>
-           {props.user.zoomlinks.map((zoomlink) => (
-                <p>{zoomlink}</p>
-            ))}
-
-            <AddForm updateUser={props.updateUser} user={props.user} updateType="zoomlinks" />
+        <Container>
+            { props.user.zoomlinks.map((link, index) => {
+                return (<LinkDisplay link={link} onDelete={onDelete(index)} />);
+            }) }
+        </Container>
+        <AddForm updateUser={props.updateUser} user={props.user} updateType="zoomlinks" />
         </div>
     )
 }

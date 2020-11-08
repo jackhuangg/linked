@@ -18,6 +18,10 @@ function AddForm({ user, updateUser, updateType }) {
     const [forminput, setform] = useState("");
     const sendevent = (e) => {
         e.preventDefault();
+        
+        if(forminput == "")
+            return;
+
         user[updateType].push(forminput);
         updateUser(user);
         setform("");

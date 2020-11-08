@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import AddForm from "./AddForm"
+import AddForm from "./AddForm";
+import LinkDisplay from "./LinkDisplay";
+import { Container } from "react-grid-system";
 
 const ListStyle = {
     position: "relative",
@@ -23,13 +25,20 @@ const HeadingStyle = {
 }
 
 function TodoList({ user, updateUser }) {
+    const onDelete = (index) => () => {
+        user.todolist.splice(index, 1);
+        updateUser(user);
+    };
+
     return (
         <div>
             <div style={ListStyle}>
                 <h1 style={HeadingStyle}>To Do List</h1>
-                {user.todolist.map((todo) => (
-                    <p>{todo}</p>
-                ))} 
+                <Container>
+                    {user.todolist.map((list, index) => {
+                        return (<LinkDisplay link={list} onDelete={onDelete(index)} />);
+                    })}
+                </Container>
                 <AddForm user={user} updateUser={updateUser} updateType={"todolist"} />
             </div>
         </div>

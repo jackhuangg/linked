@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import db from "../firebase.js"
-import AddForm from "./AddForm"
+import { Container } from "react-grid-system";
+import AddForm from "./AddForm";
+import LinkDisplay from "./LinkDisplay";
 
 const LinksStyle = {
     position: "relative",
@@ -26,14 +27,21 @@ const HeadingStyle = {
 }
 
 function Links({ user, updateUser }) {
+    const onDelete = (index) => () => {
+        user.links.splice(index, 1);
+        updateUser(user);
+    };
+
     return (
         <div style={LinksStyle}>
             <div>
                 <h1 style={HeadingStyle}>Links</h1>
             </div>
-            { user.links.map(link => {
-                return (<p>{link}</p>);
+            <Container>
+            { user.links.map((link, index) => {
+                return (<LinkDisplay link={link} onDelete={onDelete(index)} />);
             }) }
+            </Container>
             <AddForm user={user} updateUser={updateUser} updateType="links" />
         </div>
     )

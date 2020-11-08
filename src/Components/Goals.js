@@ -1,5 +1,8 @@
 import React from 'react'
-import AddForm from "./AddForm"
+import AddForm from "./AddForm";
+import LinkDisplay from "./LinkDisplay";
+import { Container } from "react-grid-system";
+
 
 const LinksStyle = {
     position: "relative",
@@ -26,13 +29,20 @@ const HeadingStyle = {
 }
 
 function Goals({user, updateUser}) {
+    const onDelete = (index) => () => {
+        user.goals.splice(index, 1);
+        updateUser(user);
+    };
+
     return (
         <div>
             <div style={LinksStyle}>
                 <h1 style={HeadingStyle}>Goals</h1>
-                {user.goals.map((goal) => (
-                    <p>{goal}</p>
-                ))} 
+                <Container>
+                    {user.goals.map((goal, index) => {
+                        return (<LinkDisplay link={goal} onDelete={onDelete(index)} />);
+                    })}
+                </Container>
                 <AddForm user={user} updateUser={updateUser} updateType={"goals"} />
             </div>
         </div>
