@@ -7,14 +7,14 @@ import { Container } from "react-grid-system";
 const LinksStyle = {
     position: "relative",
     height: "230px",
-    width: "383px",
+    width: "450px",
     backgroundColor: "#84A9AC",
-    border: "4px solid #204051",
+    border: "4px solid #84A9AC",
     boxSizing: "border-box",
-    
-    marginTop:"37%",
+    borderRadius: "18px",
+    marginTop:"8.5%",
     marginBottom: "14%",
-
+    marginRight: "1%",
 }
 
 const HeadingStyle = {

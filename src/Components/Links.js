@@ -5,13 +5,13 @@ import LinkDisplay from "./LinkDisplay";
 
 const LinksStyle = {
     position: "relative",
-    height: "500px",
+    height: "94%",
     width: "300px",
     backgroundColor: "#84A9AC",
     border: "4px solid #84A9AC",
     boxSizing: "border-box",
     borderRadius: "18px",
-    marginLeft: "0%",
+    marginLeft: "4%",
     marginRight: "0%"
 }
 
