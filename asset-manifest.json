@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cutiehack2020/static/css/main.0e3f5859.chunk.css",
+    "main.js": "/cutiehack2020/static/js/main.965a39f5.chunk.js",
+    "main.js.map": "/cutiehack2020/static/js/main.965a39f5.chunk.js.map",
+    "runtime-main.js": "/cutiehack2020/static/js/runtime-main.606917a0.js",
+    "runtime-main.js.map": "/cutiehack2020/static/js/runtime-main.606917a0.js.map",
+    "static/css/2.35e3392b.chunk.css": "/cutiehack2020/static/css/2.35e3392b.chunk.css",
+    "static/js/2.18b61230.chunk.js": "/cutiehack2020/static/js/2.18b61230.chunk.js",
+    "static/js/2.18b61230.chunk.js.map": "/cutiehack2020/static/js/2.18b61230.chunk.js.map",
+    "index.html": "/cutiehack2020/index.html",
+    "static/css/2.35e3392b.chunk.css.map": "/cutiehack2020/static/css/2.35e3392b.chunk.css.map",
+    "static/css/main.0e3f5859.chunk.css.map": "/cutiehack2020/static/css/main.0e3f5859.chunk.css.map",
+    "static/js/2.18b61230.chunk.js.LICENSE.txt": "/cutiehack2020/static/js/2.18b61230.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/cutiehack2020/static/media/rock-salt-latin-400.f7a9b4b5.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.606917a0.js",
+    "static/css/2.35e3392b.chunk.css",
+    "static/js/2.18b61230.chunk.js",
+    "static/css/main.0e3f5859.chunk.css",
+    "static/js/main.965a39f5.chunk.js"
+  ]
+}
