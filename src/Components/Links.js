@@ -9,6 +9,8 @@ const LinksStyle = {
     border: "4px solid #84A9AC",
     boxSizing: "border-box",
     borderRadius: "18px",
+    marginLeft: "0%",
+    marginRight: "0%"
 }
 
 const HeadingStyle = {
