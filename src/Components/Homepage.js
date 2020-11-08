@@ -41,7 +41,7 @@ function Homepage() {
         userRef.get()
         .then((snapshot) => {
             if(snapshot.exists) {
-                setFireBaseUser(snapshot.data);
+                setFireBaseUser(snapshot.data());
             }
             else {
                 updateUser(firebaseUser);
@@ -55,7 +55,7 @@ function Homepage() {
         userRef.set(object).then();
         const userClone = {...object};
         setFireBaseUser(userClone);
-    } 
+    };
 
     return (
         <>
