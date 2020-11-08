@@ -3,6 +3,7 @@ import db from "../firebase.js"
 import AddForm from "./AddForm"
 
 const ZoomLinksStyle = {
+    position: "relative",
     height: "500px",
     width: "300px",
     backgroundColor: "#84A9AC",
@@ -30,7 +31,8 @@ function ZoomLinks(props) {
         <h1 style={HeadingStyle}>Zoom Links</h1>
            {props.user.zoomlinks.map((zoomlink) => (
                 <p>{zoomlink}</p>
-            ))} 
+            ))}
+
             <AddForm updateUser={props.updateUser} user={props.user} updateType="zoomlinks" />
         </div>
     )

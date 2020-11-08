@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import AddForm from "./AddForm"
 
 const ListStyle = {
+    position: "relative",
     height: "500px",
     width: "300px",
     backgroundColor: "#84A9AC",

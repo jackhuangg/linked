@@ -2,6 +2,7 @@ import React from 'react'
 import AddForm from "./AddForm"
 
 const LinksStyle = {
+    position: "relative",
     height: "230px",
     width: "383px",
     backgroundColor: "#84A9AC",
