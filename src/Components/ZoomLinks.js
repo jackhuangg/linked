@@ -23,16 +23,6 @@ const HeadingStyle = {
 }
 
 function ZoomLinks(props) {
-    const firebasevar = props.user+"zoomlinks"
-    const [ZoomLinks, setZoomLinks] = useState([]);
-    useEffect(() => {
-    db.collection(firebasevar)
-        .orderBy("createdAt")
-        .onSnapshot((snapshot) =>
-        setZoomLinks(snapshot.docs.map((doc) => doc.data()))
-      );
-    }, [firebasevar]);
-    console.log(ZoomLinks)
     return (
         <div>
             <div style={ZoomLinksStyle}>
