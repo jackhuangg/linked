@@ -40,6 +40,11 @@ const QuoteStyle = {
 }
 
 function App() {
+  const titleStyle = {
+    color: "#204051",
+    backgroundColor: "#E7DFD5",
+    textAlign: "center"
+};
   // Logic state that indicates whether
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [waitingForAuth, setWaitingForAuth] = useState(false);
@@ -76,7 +81,9 @@ function App() {
   }
 
   if(waitingForAuth) {
-    return <h3>Waiting for auth...</h3>
+    return <h1 style={titleStyle} >
+              Waiting for Authentication...
+          </h1>
   }
   else if (isLoggedIn) {
     return <Homepage />
