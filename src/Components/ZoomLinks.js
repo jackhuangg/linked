@@ -3,8 +3,10 @@ import db from "../firebase.js"
 import AddForm from "./AddForm"
 
 const ZoomLinksStyle = {
-    backgroundColor: "#3B6978",
-    border: "4px solid #204051",
+    height: "500px",
+    width: "300px",
+    backgroundColor: "#84A9AC",
+    border: "4px solid #84A9AC",
     boxSizing: "border-box",
     borderRadius: "18px",
     width: "448px",
