@@ -31,10 +31,10 @@ const TitleStyle = {
 
 const QuoteStyle = {
   fontWeight: "normal",
-  fontSize: "30px",
+  fontSize: "20px",
   lineHeight: "40px",
   marginTop: "30px",
-  marginLeft: "30px",
+  marginBottom: "30px",
   color: "#204051",
   textAlign: "center"
 }
