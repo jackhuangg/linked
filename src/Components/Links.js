@@ -23,16 +23,6 @@ const HeadingStyle = {
 }
 
 function Links(props) {
-    const firebasevar = props.user+"links"
-    const [Links, setLinks] = useState([]);
-    useEffect(() => {
-    db.collection(firebasevar)
-        .orderBy("createdAt")
-        .onSnapshot((snapshot) =>
-        setLinks(snapshot.docs.map((doc) => doc.data()))
-      );
-    }, [firebasevar]);
-    console.log(Links)
     return (
         <div>
             <div style={LinksStyle}>
