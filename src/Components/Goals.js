@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import AddForm from "./AddForm"
 
 const LinksStyle = {
-    height: "230px",
-    width: "383px",
+    height: "103%",
+    width: "450px",
     backgroundColor: "#84A9AC",
-    border: "4px solid #204051",
+    border: "4px solid #84A9AC",
     boxSizing: "border-box",
-    
-    marginTop:"37%",
+    borderRadius: "18px",
+    marginTop:"8.5%",
     marginBottom: "14%",
+    marginRight: "1%",
+
 
 }
 

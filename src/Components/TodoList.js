@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import AddForm from "./AddForm"
 
 const ListStyle = {
-    height: "500px",
+    height: "665px",
     width: "300px",
     backgroundColor: "#84A9AC",
     border: "4px solid #84A9AC",
@@ -17,7 +17,7 @@ const HeadingStyle = {
     fontSize: "24px",
     lineHeight: "57px",
     marginTop: "0px",
-    marginLeft: "10px",
+    marginLeft: "1%",
     color: "#E7DFD5"
 }
 
