@@ -36,7 +36,7 @@ function TodoList({ user, updateUser }) {
                 <h1 style={HeadingStyle}>To Do List</h1>
                 <Container>
                     {user.todolist.map((list, index) => {
-                        return (<LinkDisplay link={list} onDelete={onDelete(index)} />);
+                        return (<LinkDisplay link={list} onDelete={onDelete(index)} isHref={false} />);
                     })}
                 </Container>
                 <AddForm user={user} updateUser={updateUser} updateType={"todolist"} />

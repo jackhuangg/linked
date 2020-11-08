@@ -39,7 +39,7 @@ function Links({ user, updateUser }) {
             </div>
             <Container>
             { user.links.map((link, index) => {
-                return (<LinkDisplay link={link} onDelete={onDelete(index)} />);
+                return (<LinkDisplay link={link} onDelete={onDelete(index)} isHref={true} />);
             }) }
             </Container>
             <AddForm user={user} updateUser={updateUser} updateType="links" />

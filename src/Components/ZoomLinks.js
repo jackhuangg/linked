@@ -37,7 +37,7 @@ function ZoomLinks(props) {
         <h1 style={HeadingStyle}>Zoom Links</h1>
         <Container>
             { props.user.zoomlinks.map((link, index) => {
-                return (<LinkDisplay link={link} onDelete={onDelete(index)} />);
+                return (<LinkDisplay link={link} onDelete={onDelete(index)} isHref={true} />);
             }) }
         </Container>
         <AddForm updateUser={props.updateUser} user={props.user} updateType="zoomlinks" />

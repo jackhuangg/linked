@@ -40,7 +40,7 @@ function Goals({user, updateUser}) {
                 <h1 style={HeadingStyle}>Goals</h1>
                 <Container>
                     {user.goals.map((goal, index) => {
-                        return (<LinkDisplay link={goal} onDelete={onDelete(index)} />);
+                        return (<LinkDisplay link={goal} onDelete={onDelete(index)} isHref={false} />);
                     })}
                 </Container>
                 <AddForm user={user} updateUser={updateUser} updateType={"goals"} />
