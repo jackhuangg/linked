@@ -7,8 +7,8 @@ const LinksStyle = {
     backgroundColor: "#84A9AC",
     border: "4px solid #204051",
     boxSizing: "border-box",
-    borderRadius: "14px",
-    marginTop:"77%",
+    
+    marginTop:"37%",
     marginBottom: "14%",
 
 }
