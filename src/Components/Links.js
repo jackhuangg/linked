@@ -22,12 +22,15 @@ const HeadingStyle = {
     color: "#E7DFD5"
 }
 
-function Links() {
+function Links({ user }) {
     return (
         <div style={LinksStyle}>
             <div>
-            <h1 style={HeadingStyle}>Links</h1>
+                <h1 style={HeadingStyle}>Links</h1>
             </div>
+            { user.links.map(link => {
+                return (<p>{link}</p>);
+            }) }
         </div>
     )
 }

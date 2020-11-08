@@ -71,7 +71,7 @@ function Homepage() {
                         </Row>
                     </Col>
                     <Col>
-                        <Links />
+                        <Links user={firebaseUser}/>
                     </Col>
                     <Col>
                         <TodoList />
