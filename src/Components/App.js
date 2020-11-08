@@ -35,6 +35,8 @@ const QuoteStyle = {
   lineHeight: "40px",
   marginTop: "30px",
   marginBottom: "30px",
+  paddingLeft: "15px",
+  paddingRight: "15px",
   color: "#204051",
   textAlign: "center"
 }
