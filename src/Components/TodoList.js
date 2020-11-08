@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import db from "../firebase.js"
 import AddForm from "./AddForm"
 
 const ListStyle = {
@@ -22,15 +21,15 @@ const HeadingStyle = {
     color: "#E7DFD5"
 }
 
-function TodoList() {
+function TodoList({ user, updateUser }) {
     return (
         <div>
             <div style={ListStyle}>
                 <h1 style={HeadingStyle}>To Do List</h1>
-                {TodoList.map((todolist) => (
-                    <p>{todolist.event}</p>
+                {user.todolist.map((todo) => (
+                    <p>{todo}</p>
                 ))} 
-                <AddForm collection={firebasevar}/>
+                <AddForm user={user} updateUser={updateUser} updateType={"todolist"} />
             </div>
         </div>
     )

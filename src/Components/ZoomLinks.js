@@ -9,6 +9,8 @@ const ZoomLinksStyle = {
     border: "4px solid #84A9AC",
     boxSizing: "border-box",
     borderRadius: "18px",
+    width: "448px",
+    height: "376px"
 }
 
 const HeadingStyle = {
@@ -24,13 +26,12 @@ const HeadingStyle = {
 
 function ZoomLinks(props) {
     return (
-        <div>
-             <div style={ZoomLinksStyle}>
-            {props.user.zoomlinks.map((zoomlink) => (
-                 <p>{zoomlink}</p>
-             ))} 
-             <AddForm updateUser={props.updateUser} user={props.user}/>
-            </div>
+        <div style={ZoomLinksStyle}>
+        <h1 style={HeadingStyle}>Zoom Links</h1>
+           {props.user.zoomlinks.map((zoomlink) => (
+                <p>{zoomlink}</p>
+            ))} 
+            <AddForm updateUser={props.updateUser} user={props.user} updateType="zoomlinks" />
         </div>
     )
 }
