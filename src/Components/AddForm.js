@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import firebase from "firebase"
 import db from "../firebase.js"
 
-function AddForm(props) {
+function AddForm({user, updateUser, updateType}) {
     const [forminput, setform] = useState("");
     const sendevent = (e) => {
         e.preventDefault();
-        props.user.zoomlinks.push(forminput);
-        props.updateUser(props.user);
+        user[updateType].push(forminput);
+        updateUser(user);
         setform("");
       };
     return (

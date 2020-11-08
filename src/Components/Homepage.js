@@ -31,7 +31,8 @@ function Homepage() {
     const [firebaseUser, setFireBaseUser] = useState({
         goals: [],
         zoomlinks: [],
-        links: []
+        links: [],
+        todolist: []
     });
 
     // Load the firebase user from firestore
@@ -41,7 +42,11 @@ function Homepage() {
         userRef.get()
         .then((snapshot) => {
             if(snapshot.exists) {
-                setFireBaseUser(snapshot.data());
+                const userData = snapshot.data();
+                // Check if user data exists
+                if(!userData["todolist"])
+                    userData["todolist"] = [];
+                setFireBaseUser(userData);
             }
             else {
                 updateUser(firebaseUser);
@@ -67,14 +72,14 @@ function Homepage() {
                             <ZoomLinks user={firebaseUser} updateUser={updateUser}/>
                         </Row>
                         <Row>
-                            <Goals />
+                            <Goals user={firebaseUser} updateUser={updateUser} />
                         </Row>
                     </Col>
                     <Col>
-                        <Links user={firebaseUser}/>
+                        <Links user={firebaseUser} updateUser={updateUser} />
                     </Col>
                     <Col>
-                        <TodoList />
+                        <TodoList user={firebaseUser} updateUser={updateUser} />
                     </Col>
                 </Row>
             </Container>

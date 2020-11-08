@@ -22,19 +22,16 @@ const HeadingStyle = {
     color: "#E7DFD5"
 }
 
-function Links({ user }) {
+function Links({ user, updateUser }) {
     return (
-        <div>
-            <div style={LinksStyle}>
+        <div style={LinksStyle}>
+            <div>
                 <h1 style={HeadingStyle}>Links</h1>
-                {Links.map((link) => (
-                    <p>{link.event}</p>
-                ))} 
-                <AddForm collection={firebasevar}/>
             </div>
             { user.links.map(link => {
                 return (<p>{link}</p>);
             }) }
+            <AddForm user={user} updateUser={updateUser} updateType="links" />
         </div>
     )
 }

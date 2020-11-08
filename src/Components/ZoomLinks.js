@@ -31,7 +31,7 @@ function ZoomLinks(props) {
            {props.user.zoomlinks.map((zoomlink) => (
                 <p>{zoomlink}</p>
             ))} 
-            <AddForm updateUser={props.updateUser} user={props.user}/>
+            <AddForm updateUser={props.updateUser} user={props.user} updateType="zoomlinks" />
         </div>
     )
 }
