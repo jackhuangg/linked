@@ -13,7 +13,7 @@ const LinksStyle = {
     boxSizing: "border-box",
     borderRadius: "18px",
     marginTop:"8.5%",
-    marginBottom: "14%",
+    marginBottom: "9%",
     marginRight: "1%",
 }
 

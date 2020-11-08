@@ -5,7 +5,7 @@ import { Container } from "react-grid-system";
 
 const ListStyle = {
     position: "relative",
-    height: "665px",
+    height: "645px",
     width: "300px",
     backgroundColor: "#84A9AC",
     border: "4px solid #84A9AC",
